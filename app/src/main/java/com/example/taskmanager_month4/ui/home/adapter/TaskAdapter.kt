@@ -1,12 +1,10 @@
-package com.example.taskmanager_month4.ui.home
+package com.example.taskmanager_month4.ui.home.adapter
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.taskmanager_month4.R
-import com.example.taskmanager_month4.databinding.FragmentTaskBinding
 import com.example.taskmanager_month4.databinding.ItemTaskBinding
 import com.example.taskmanager_month4.model.Task
 

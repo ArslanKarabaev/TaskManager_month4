@@ -34,5 +34,9 @@
         android:name="com.example.taskmanager_month4.ui.task.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.taskmanager_month4.ui.onboarding.OnBoardingFragment"
+        android:label="OnBoardingFragment" />
 
 </navigation>
