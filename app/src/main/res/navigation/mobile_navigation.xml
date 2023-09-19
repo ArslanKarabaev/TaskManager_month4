@@ -22,9 +22,17 @@
         android:name="com.example.taskmanager_month4.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.taskmanager_month4.ui.profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.taskmanager_month4.ui.task.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task" />
+
 </navigation>
