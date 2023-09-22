@@ -5,6 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#CC3F51B5"
+        android:text="Skip All >"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/img_onboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/img_onboard"
         android:layout_width="250dp"
@@ -12,7 +24,8 @@
         android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/tv_title"
@@ -20,12 +33,13 @@
         android:layout_height="wrap_content"
         android:text="Title"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_onboard"
         app:layout_constraintBottom_toTopOf="@id/tv_desc"
-        android:layout_margin="32dp"/>
+        android:layout_margin="32dp"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/tv_desc"
@@ -33,10 +47,12 @@
         android:layout_height="wrap_content"
         android:text="Desc"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/btn_start"
@@ -47,5 +63,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
