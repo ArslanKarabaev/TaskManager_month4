@@ -24,8 +24,7 @@ class OnBoardingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.viewPager.adapter = adapter
-        val indicator = view.findViewById<WormDotsIndicator>(R.id.indicator)
-        indicator.attachTo(binding.viewPager)
+        binding.indicator.attachTo(binding.viewPager)
 
     }
 
