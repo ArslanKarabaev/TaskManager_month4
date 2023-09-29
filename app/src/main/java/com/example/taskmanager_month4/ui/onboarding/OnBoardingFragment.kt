@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.taskmanager_month4.R
+import com.example.taskmanager_month4.data.local.Pref
 import com.example.taskmanager_month4.databinding.FragmentOnboardingBinding
 import com.example.taskmanager_month4.ui.onboarding.adapter.OnBoardingAdapter
-import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 class OnBoardingFragment : Fragment() {
+    private val pref by lazy {
+        Pref(requireContext())
+    }
     private lateinit var binding: FragmentOnboardingBinding
     private val adapter = OnBoardingAdapter(this::onClick)
     override fun onCreateView(
@@ -29,6 +31,7 @@ class OnBoardingFragment : Fragment() {
     }
 
     private fun onClick(){
+        pref.userShowed()
         findNavController().navigateUp()
     }
 

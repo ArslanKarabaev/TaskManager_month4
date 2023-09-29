@@ -10,9 +10,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:backgroundTint="#CC3F51B5"
+        android:backgroundTint="#96B1C6"
         android:text="Skip All >"
-        android:textColor="@color/blue"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/img_onboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
