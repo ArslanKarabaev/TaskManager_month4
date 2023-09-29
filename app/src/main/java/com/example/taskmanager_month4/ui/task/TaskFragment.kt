@@ -1,5 +1,6 @@
 package com.example.taskmanager_month4.ui.task
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,9 +9,11 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
+import com.example.taskmanager_month4.App
 import com.example.taskmanager_month4.R
 import com.example.taskmanager_month4.databinding.FragmentTaskBinding
 import com.example.taskmanager_month4.model.Task
+import java.text.FieldPosition
 
 class TaskFragment : Fragment() {
 
@@ -37,11 +40,13 @@ class TaskFragment : Fragment() {
                     desc = binding.etDesk.text.toString()
                 )
 
-                setFragmentResult(RESULT_KEY, bundleOf(TASK_KEY to data))
+                App.db.taskDao().insert(data)
                 findNavController().navigateUp()
             }
         }
     }
+
+
 
     companion object{
         const val RESULT_KEY = "result.key"
