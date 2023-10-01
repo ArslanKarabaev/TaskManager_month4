@@ -25,9 +25,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -40,7 +38,7 @@ class HomeFragment : Fragment() {
         binding.recyclerView.adapter = adapter
         val data = App.db.taskDao().getAll()
         adapter.addData(data)
-        binding.fab.setOnClickListener{
+        binding.fab.setOnClickListener {
             findNavController().navigate(R.id.taskFragment)
         }
     }
@@ -49,23 +47,17 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    private fun onLongClick(task : Task){
+
+    private fun onLongClick(task: Task) {
         val alertDialog = AlertDialog.Builder(requireContext())
         alertDialog.setMessage("Удалить элемент?")
-            .setTitle("Вы уверены, что хотите удалить выбранный элемент?")
-            .setNegativeButton("Нет", object: DialogInterface.OnClickListener{
-               override fun onClick(dialog: DialogInterface?, which: Int){
-                    dialog?.cancel()
-                }
-            })
-            .setPositiveButton("Да", object: DialogInterface.OnClickListener{
-                override fun onClick(dialog: DialogInterface?, which: Int){
-                    App.db.taskDao().delete(task)
-                    val tasks = App.db.taskDao().getAll()
-                    adapter.addData(tasks)
-                }
-            })
-            .show()
+            .setTitle("Вы уверены, что хотите удалить выбранный элемент?").setNegativeButton(
+                "Нет"
+            ) { dialog, which -> dialog?.cancel() }.setPositiveButton("Да") { dialog, which ->
+                App.db.taskDao().delete(task)
+                val tasks = App.db.taskDao().getAll()
+                adapter.addData(tasks)
+            }.show()
 
     }
 }

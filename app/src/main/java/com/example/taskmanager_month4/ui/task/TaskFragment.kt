@@ -31,10 +31,10 @@ class TaskFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnSave.setOnClickListener{
-            if(binding.etTitle.text.isEmpty()){
+        binding.btnSave.setOnClickListener {
+            if (binding.etTitle.text.isEmpty()) {
                 binding.etTitle.error = "Введите название"
-            }else {
+            } else {
                 val data = Task(
                     title = binding.etTitle.text.toString(),
                     desc = binding.etDesk.text.toString()
@@ -47,8 +47,7 @@ class TaskFragment : Fragment() {
     }
 
 
-
-    companion object{
+    companion object {
         const val RESULT_KEY = "result.key"
         const val TASK_KEY = "task.key"
 

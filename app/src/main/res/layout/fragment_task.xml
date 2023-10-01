@@ -11,13 +11,18 @@
         android:id="@+id/et_title"
         android:hint="Title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_borders"
+        android:layout_marginBottom="12dp"
+        android:padding="12dp"/>
 
     <EditText
         android:id="@+id/et_desk"
         android:hint="Description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_borders"
+        android:padding="12dp"/>
 
     <Button
         android:id="@+id/btn_save"

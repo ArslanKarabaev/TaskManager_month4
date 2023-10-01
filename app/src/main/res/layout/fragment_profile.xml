@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:hint="User name"
+        android:background="@drawable/et_borders"
         android:padding="16dp"
         android:textColorHint="#555555"
         android:textSize="16sp"

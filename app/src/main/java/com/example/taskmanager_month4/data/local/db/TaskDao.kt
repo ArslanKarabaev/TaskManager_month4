@@ -9,6 +9,7 @@ import com.example.taskmanager_month4.model.Task
 
 @Dao
 interface TaskDao {
+
     @Query("SELECT * FROM task")
     fun getAll(): List<Task>
 
